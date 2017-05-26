@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/hsheth2
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://harshalsheth.com
+  * I am hsheth2 (https://keybase.io/hsheth2) on keybase.
+  * I have a public key with fingerprint D849 4B18 1CF3 A76D FD96  BB9F 454F DD4C 4E25 00FC
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010128814b8e38b13e1244ba960ad336586203be2ed9e7e9d9c0663c40b741d66eaf0a",
+            "fingerprint": "d8494b181cf3a76dfd96bb9f454fdd4c4e2500fc",
+            "host": "keybase.io",
+            "key_id": "454fdd4c4e2500fc",
+            "kid": "010128814b8e38b13e1244ba960ad336586203be2ed9e7e9d9c0663c40b741d66eaf0a",
+            "uid": "60584f3fdf7277217ed42c6399f55019",
+            "username": "hsheth2"
+        },
+        "service": {
+            "hostname": "harshalsheth.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1495824775,
+    "expire_in": 157680000,
+    "prev": "1ae11c2bed63f2f43c9a8c6c306a9e05504df88bf0dd28ee386b22189ef5b922",
+    "seqno": 26,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.71
+Comment: https://keybase.io/crypto
+
+yMIoAnicrZJbSBVBGMfXS2ZHinqJLpY5PaRguTM7O7t7eiiKeikLKsMkOs3uzHgW
+9ezx7GpeuoNUZNmFypII7CXEhy5GFwUrSojwIbBADCp8EemCpFFS0azUW4/NyzDf
+/P7/+X8f83R2hhJJu97ZSuDGxTvSXjxur1V2FTQcawK2xxpAtAlU8umNVzHuB7FK
+l4EoUKEKkWlCbJtcM22ocYgwtqlFVMo0jegmQapmc8SZxQ1uMctRCdEcrNoGhowQ
+ToVKQREQbqKCp5IpNxFIW2ZiC9vQhI7QqEGYYBaxbUtgHQvGsIM50lVVOFIY9/xQ
+IcPZ1OerXE/W5CE2He8f/H/OXTttR1TdxEITTBjIMBA0OMPIIZplCV1XoRWCPk8l
+aDWXdNyP8yCOwIEiIIt1rsPDuYaN/AVoyo/TqmlsleNVS3ky5QWe41WFt0GQ9KOh
+OmhIhvg+bsf+GMVsN8HkKKWijqd810uAKJSkE7ihM8SWbiJsGHoR4PVJN8Vjbkjo
+BjFVucJ3eJ20hJRD6CCbM6IJJLDmWNR0iKOphFpclU1hJkzTFipjyORyhsRGCJoW
+F7ptIQTC1moSHogiInPSCunpuxUJGtSmODjw5NHuTCUtomTNSA//mBKZNffvz7s7
+ka0M7P2gHb23rXRO74PIteIP6zcd35+XNza2qC0YLCvN1T+/PLG2+9XWnObTOUPL
++M91S9dcMFqGb5VQUPf9XWVO7sIlieo7PxT6s7nt18U9mrVdOdPTueJQWX5rRuPM
+juLJrrd775dHvu4Wg+87+i5n7+OPvr5Oc0cnnZUbpuZkgqxnFTsPn22aP9CeXz7W
+d7imUOloPF9S2z40eTs9czT6rWDegptgef7zlkvF5b1XT10eXq2oZV/6u46eaD1z
+aWXuxI0tB0++aW5DTeV9p0eGL55cUniE8hKlFVw5kqePDG/78bBgfKo+y7s98PDq
+5kh9z7mDTvrY55ZP4/TsR9A9bpb2/wZvyD0d
+=6Gae
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/hsheth2
+
+==================================================================
