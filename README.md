@@ -1,1 +1,2 @@
-Harshal Sheth's personal site. 
+My personal site: https://harshalsheth.com.
+
