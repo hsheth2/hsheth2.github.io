@@ -4,59 +4,25 @@
 
 <title>Harshal Sheth</title>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.5/css/fork-awesome.min.css" integrity="sha256-P64qV9gULPHiZTdrS1nM59toStkgjM0dsf5mK/UwBV4=" crossorigin="anonymous">
 
 
 <style type="text/css">
-body, html {
-	height: 100%;
-	margin: 0;
+body {
+	font-family: "Lato", sans-serif;	
 }
 
-a {
-	color: inherit;
-} 
-
-.bg {
+.has-bg {
 	background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('images/bg.jpg');
-
-	/* Full height */
-	height: 100%; 
-
-	/* Center and scale the image nicely */
-	position: relative;
-	background-position: center;
-	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.caption {
-	position: absolute;
-	left: 0;
-	top: 40%;
-	width: 100%;
-	text-align: center;
-	color: #000;
-
-	font-weight: 400;
-	line-height: 1.8;
-	font-family: "Lato", sans-serif;
-}
-
-.caption span.border {
-	/*background-color: #111;*/
-	color: #fff;
-	/*padding: 18px;*/
-	font-size: 2em;
-	letter-spacing: .4em;
-	text-transform: uppercase;
-}
-
-.larger {
-	font-size: 1.2em;
+.main-text {
+	letter-spacing: .6rem;	
 }
 
 </style>
@@ -64,19 +30,29 @@ a {
 </head>
 <body>
 
-<div class="bg">
-	<div class="caption">
-		<span class="border"><span class="larger">Harshal Sheth</span></span>
-		<br>
-		<span class="border">
-			<a href="mailto:me@harshalsheth.com"><i class="fa fa-envelope-o"></i></a>
-			<a href="https://github.com/hsheth2"><i class="fa fa-github"></i></a>
-			<a href="https://www.linkedin.com/in/hsheth2"><i class="fa fa-linkedin"></i></a>
-			<a href="https://keybase.io/hsheth2"><i class="fa fa-keybase"></i></a>
-			<a href="https://harshalsheth.com/"><i class="fa fa-globe"></i></a>
-		</span>
+<section class="hero is-dark has-bg is-fullheight">
+	<div class="hero-body">
+		<div class="container has-text-centered main-text">
+			<h1 class="title is-size-1 is-size-3-mobile is-uppercase has-text-weight-light">
+				<span>Harshal Sheth</span>
+			</h1>
+			<h2 class="subtitle is-size-3 is-size-4-mobile is-unselectable">
+				<a href="mailto:me@harshalsheth.com"><span class="is-sr-only">Email</span><i class="fa fa-envelope-o"></i></a>
+				<a href="https://github.com/hsheth2"><span class="is-sr-only">GitHub</span><i class="fa fa-github"></i></a>
+				<a href="https://www.linkedin.com/in/hsheth2"><span class="is-sr-only">LinkedIn</span><i class="fa fa-linkedin"></i></a>
+				<a href="https://keybase.io/hsheth2"><span class="is-sr-only">Keybase</span><i class="fa fa-keybase"></i></a>
+				<a href="https://harshalsheth.com/"><span class="is-sr-only">Website</span><i class="fa fa-globe"></i></a>
+			</h2>
+		</div>
 	</div>
-</div>
+
+	<div class="hero-foot">
+		<div class="container has-text-centered has-text-grey-light is-size-7 is-unselectable is-hidden-mobile">
+			<p>Background photo by <a href="https://unsplash.com/@laurenmancke">Lauren Mancke</a> on Unsplash</p>
+		</div>
+	</div>
+</section>
+
 
 </body>
 </html>
