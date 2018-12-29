@@ -4,7 +4,7 @@ services:
     image: kyma/docker-nginx
     restart: always
     volumes:
-      - .:/var/www
+      - .:/var/www:ro
     ports:
       - "3007:80"
 
