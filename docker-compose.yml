@@ -6,16 +6,29 @@ services:
     restart: always
     volumes:
       - .:/var/www:ro
-    expose:
-      - 80
+    labels:
+      traefik.enable: true
+      traefik.docker.network: "traefik"
+      traefik.port: 80
+      traefik.frontend.rule: Host:harshal.sheth.io
     networks:
       - traefik
       - default
+  alternate:
+    image: schmunk42/nginx-redirect
+    restart: always
+    environment:
+      SERVER_REDIRECT: harshal.sheth.io
     labels:
-      - "traefik.enable=true"
-      - "traefik.docker.network=traefik"
-      - "traefik.frontend.rule=Host:harshalsheth.com"
-      - "traefik.port=80"
+      traefik.enable: true
+      traefik.docker.network: "traefik"
+      traefik.port: 80
+      traefik.alt-com.frontend.rule: Host:harshalsheth.com,www.harshalsheth.com
+      traefik.alt-me.frontend.rule: Host:harshalsheth.me,www.harshalsheth.me
+      traefik.alt-tk.frontend.rule: Host:harshalsheth.tk,www.harshalsheth.tk
+    networks:
+      - traefik
+      - default
 
 networks:
   traefik:
