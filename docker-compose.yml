@@ -2,15 +2,17 @@ version: '2'
 
 services:
   web:
-    image: kyma/docker-nginx
+    build: .
     restart: always
-    volumes:
-      - .:/var/www:ro
     labels:
       traefik.enable: true
       traefik.docker.network: "traefik"
       traefik.port: 80
       traefik.frontend.rule: Host:harshal.sheth.io
+      traefik.frontend.headers.SSLRedirect: true
+      traefik.frontend.headers.STSPreload: true
+      traefik.frontend.headers.STSSeconds: 2628000
+      traefik.frontend.headers.STSIncludeSubdomains: true
     networks:
       - traefik
       - default
@@ -26,6 +28,10 @@ services:
       traefik.alt-com.frontend.rule: Host:harshalsheth.com,www.harshalsheth.com
       traefik.alt-me.frontend.rule: Host:harshalsheth.me,www.harshalsheth.me
       traefik.alt-tk.frontend.rule: Host:harshalsheth.tk,www.harshalsheth.tk
+      traefik.frontend.headers.SSLRedirect: true
+      traefik.frontend.headers.STSPreload: true
+      traefik.frontend.headers.STSSeconds: 2628000
+      traefik.frontend.headers.STSIncludeSubdomains: true
     networks:
       - traefik
       - default
