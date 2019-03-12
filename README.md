@@ -1,2 +1,2 @@
 # Personal Site
-View at [https://harshalsheth.com](https://harshalsheth.com). 
+View at https://harshal.sheth.io.
