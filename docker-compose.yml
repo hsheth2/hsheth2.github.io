@@ -7,12 +7,9 @@ services:
     labels:
       traefik.enable: true
       traefik.docker.network: "traefik"
-      traefik.port: 80
-      traefik.frontend.rule: Host:harshal.sheth.io
-      traefik.frontend.headers.SSLRedirect: true
-      traefik.frontend.headers.STSPreload: true
-      traefik.frontend.headers.STSSeconds: 2628000
-      traefik.frontend.headers.STSIncludeSubdomains: true
+      traefik.http.routers.harshal-sheth-io.rule: Host(`harshal.sheth.io`)
+      traefik.http.routers.harshal-sheth-io.tls.certResolver: default
+      traefik.http.routers.harshal-sheth-io.middlewares: SecureTLS
     networks:
       - traefik
       - default
@@ -24,14 +21,9 @@ services:
     labels:
       traefik.enable: true
       traefik.docker.network: "traefik"
-      traefik.port: 80
-      traefik.alt-com.frontend.rule: Host:harshalsheth.com,www.harshalsheth.com
-      traefik.alt-me.frontend.rule: Host:harshalsheth.me,www.harshalsheth.me
-      traefik.alt-tk.frontend.rule: Host:harshalsheth.tk,www.harshalsheth.tk
-      traefik.frontend.headers.SSLRedirect: true
-      traefik.frontend.headers.STSPreload: true
-      traefik.frontend.headers.STSSeconds: 2628000
-      traefik.frontend.headers.STSIncludeSubdomains: true
+      traefik.http.routers.harshal-sheth-alternate.rule: Host(`harshalsheth.me`, `www.harshalsheth.me`, `harshalsheth.tk`, `www.harshalsheth.tk`)
+      traefik.http.routers.harshal-sheth-alternate.tls.certResolver: default
+      traefik.http.routers.harshal-sheth-alternate.middlewares: SecureTLS
     networks:
       - traefik
       - default
