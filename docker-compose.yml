@@ -19,7 +19,7 @@ services:
       SERVER_REDIRECT: harshal.sheth.io
     labels:
       traefik.enable: true
-      traefik.http.routers.harshal-sheth-alternate.rule: Host(`harshalsheth.me`, `www.harshalsheth.me`, `harshalsheth.tk`, `www.harshalsheth.tk`)
+      traefik.http.routers.harshal-sheth-alternate.rule: Host(`sheth.io`, `harshalsheth.me`, `www.harshalsheth.me`, `harshalsheth.tk`, `www.harshalsheth.tk`)
       traefik.http.routers.harshal-sheth-alternate.tls: true
       traefik.http.routers.harshal-sheth-alternate.middlewares: SecureTLS
     networks:
