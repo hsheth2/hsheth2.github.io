@@ -12,7 +12,7 @@ permalink: /
   margin-left: 1.5em;
   margin-bottom: 1.5em;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 30em) {
   .avatar {
     display: block;
     float: unset;
