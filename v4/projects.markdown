@@ -7,7 +7,7 @@ permalink: /projects
 I've worked on a bunch of different things over the years. 
 Although I'm always [working on new stuff](https://github.com/hsheth2), this should serve as a mostly complete compilation.
 
-## Research
+## Major Projects
 
 ### **Skua**: distributed tracing in the Linux kernel 
 
@@ -35,8 +35,6 @@ Tarpan is a completely in-band variant of the [D-BGP](https://www.darwinsbgp.com
 - Read the [paper](https://arxiv.org/abs/1603.05636), titled *An Implementation and Analysis of a Kernel Network Stack in Go with the CSP Style*.
 - Our [code](https://github.com/hsheth2/gonet) is open source and probably has more Github stars than it deserves.
 
-## Major Projects
-
 ### **when2water**: an intelligent irrigation controller
 
 Along with my brother [Nihar Sheth](https://nihar.sheth.io), I built a low-cost irrigation controller that uses machine learning and local weather data to reduce water usage by almost 60%. We then built a website and API, and even installed a couple irrigation controllers in people's homes in our community. We were one of 31 teams to win the $1k local award prize as part of the [Google Science Fair](https://en.wikipedia.org/wiki/Google_Science_Fair), and were also named [state winners](https://www.newea.org/2015/07/01/wef-announces-sjwp-2015-winner-and-finalists/) in the [Stockholm Junior Water Prize](https://www.wef.org/resources/for-the-public/SJWP/).
@@ -53,7 +51,7 @@ This all culminated in us running our own competition, [CTF(x)](https://ctf-x.gi
 
 ## Hackathon Projects
 
-I've competed in a bunch of different hackathons. The code that we write during hackathons is pretty hacky, and may require [minimal configuration and tweaking](https://xkcd.com/1742/) to get running.
+I've competed in a bunch of different hackathons. The code that we write during hackathons isn't pretty, and may require [minimal configuration and tweaking](https://xkcd.com/1742/) to get working.
 
 - [Opinionate](https://github.com/hsheth2/opinionate) - MIT Blueprint 2015 🥈
 - [Pinpoint](https://github.com/hsheth2/pinpoint) - MIT Blueprint 2016
