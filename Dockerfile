@@ -1,3 +1,7 @@
-FROM nginx
+FROM jekyll/jekyll AS builder
 
-COPY . /usr/share/nginx/html
+COPY . /srv/jekyll
+RUN jekyll build
+
+FROM nginx
+COPY --from=builder /srv/jekyll/_site /usr/share/nginx/html
