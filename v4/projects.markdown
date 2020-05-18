@@ -11,7 +11,7 @@ Although I'm always [working on new stuff](https://github.com/hsheth2), this sho
 
 ### **Skua**: distributed tracing in the Linux kernel 
 
-![Skua architecture]({{site.url}}/assets/images/skua-diagram.png)
+<!-- ![Skua architecture]({{site.url}}/assets/images/skua-diagram.png) -->
 
 Skua extends the [Jaeger](https://www.jaegertracing.io/ ) distributed tracing framework to integrate kernel-level traces produced by [LTTng](https://lttng.org/ ).
 [Andrew Sun](https://andrewsun.com/) and I presented at the [2018 MIT PRIMES conference](https://math.mit.edu/research/highschool/primes/conference/conf-2018.php) and at [DevConf US 2018](https://devconf.info/us/2018).
