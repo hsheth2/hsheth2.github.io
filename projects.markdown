@@ -4,12 +4,12 @@ title: Projects
 permalink: /projects
 ---
 
-I've worked on a bunch of different things over the years. 
+I've worked on a bunch of different things over the years.
 Although I'm always [working on new stuff](https://github.com/hsheth2), this should serve as a mostly complete compilation.
 
 ## Major Projects
 
-### **Skua**: distributed tracing in the Linux kernel 
+### **Skua**: distributed tracing in the Linux kernel
 
 <!-- ![Skua architecture]({{ "/assets/images/skua-diagram.png" | relative_url }}) -->
 
@@ -18,13 +18,13 @@ Skua extends the [Jaeger](https://www.jaegertracing.io/ ) distributed tracing fr
 
 - Take a look at our [slides](https://l.sheth.io/skua-slides).
 - Watch the [video](https://youtu.be/vyCU8D5KYek?t=1h7m7s) of our presentation.
-- Our [code](https://github.com/docc-lab/skua) is open source - try it out! 
+- Our [code](https://github.com/docc-lab/skua) is open source - try it out!
 
 ### **Tarpan**: a routing protocol design to replace BGP
 
 Tarpan is a completely in-band variant of the [D-BGP](https://www.darwinsbgp.com/) protocol. D-BGP, designed by our research mentor [Raja Sambasivan](https://www.rajasambasivan.com/), contains all the necessary characteristics to move the Internet away from the Border Gateway Protocol and its limitations, while maintaining backwards compatibility to facilitate incremental adoption. [Andrew Sun](https://andrewsun.com/) and I presented at the [2017 MIT PRIMES conference](https://math.mit.edu/research/highschool/primes/conference/conf-2017.php) and were also named semifinalists in the 2017 [Siemens Competition](https://en.wikipedia.org/wiki/Siemens_Competition).
 
-- Look at our [slides](https://math.mit.edu/research/highschool/primes/materials/2017/conf/12-1-Sheth-Sun.pdf)
+- Look at our [slides](https://math.mit.edu/research/highschool/primes/materials/2017/conf/12-1-Sheth-Sun.pdf).
 - Read the [paper](https://l.sheth.io/tarpan).
 - We implemented Tarpan as an [extension](https://github.com/hsheth2/tarpan/compare/aa93417671b609a56997bc2c676cbfc640199e7a...master) to the [Quagga router](https://www.quagga.net/). Take a look at our [code](https://github.com/hsheth2/tarpan).
 
