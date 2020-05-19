@@ -1,0 +1,5 @@
+# Prevent some things from entering Docker
+/.git/
+/.gitignore
+/Dockerfile
+/docker-compose.yml

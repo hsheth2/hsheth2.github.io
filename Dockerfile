@@ -1,7 +1,17 @@
-FROM jekyll/jekyll AS builder
+FROM ruby:2.7 AS builder
 
-COPY . /srv/jekyll
-RUN jekyll build
+ENV JEKYLL_ENV=production
+ENV APP_DIR=/app
+WORKDIR $APP_DIR
 
-FROM nginx
-COPY --from=builder /srv/jekyll/_site /usr/share/nginx/html
+COPY Gemfile $APP_DIR
+COPY Gemfile.lock $APP_DIR
+RUN bundle install
+
+COPY . .
+RUN bundle exec jekyll build
+
+EXPOSE 4000
+CMD [ "bundle", "exec", "jekyll", "serve", "--host=0.0.0.0" ]
+#FROM nginx
+#COPY --from=builder /app/_site /usr/share/nginx/html
