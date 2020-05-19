@@ -22,7 +22,7 @@ permalink: /
 
 </style>
 
-<img class="avatar" alt="A picture of me" src="{{site.url}}/assets/images/me.png" />
+<img class="avatar" alt="A picture of me" src="{{ "/assets/images/me.png" | relative_url }}" />
 
 I'm Harshal Sheth, and I'm an undergrad studying CS at Yale. I've previously worked at Google, where I built out tracing tools for [Fuchsia](https://fuchsia.dev/), and at [Instabase](https://about.instabase.com/), where I built a scalable, distributed task execution framework.
 
