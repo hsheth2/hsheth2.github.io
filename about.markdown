@@ -34,6 +34,6 @@ Right now (as of 2020-05-19), I've been working on some [personal projects]({% l
 
 If you'd like to connect, work together, or just chat, please reach out via email to [harshal@sheth.io](mailto:harshal@sheth.io).
 
-You can also find me on [Facebook](https://www.facebook.com/harshalsheth2), [Github](https://github.com/hsheth2/), or [LinkedIn](https://www.linkedin.com/in/hsheth2/).
+You can also find me on [Github](https://github.com/hsheth2/), or [LinkedIn](https://www.linkedin.com/in/hsheth2/).
 
-[//]: Accounts not added: last.fm /  spotify / instagram / twitter / keybase
+[//]: Accounts not added: last.fm /  spotify / instagram / twitter / keybase / facebook
