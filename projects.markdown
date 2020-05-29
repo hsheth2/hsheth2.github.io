@@ -49,9 +49,21 @@ While not really a project per-se, I've spent a fair amount of time on [Capture 
 
 This all culminated in us running our own competition, [CTF(x)](https://ctf-x.github.io/). Almost [500 teams](https://ctftime.org/event/348) participated in the CTF, and no team was able to get a perfect score. After the competition, we posted detailed  [writeups](https://github.com/ctf-x/ctfx-problems-2016) for all the problems.
 
-## Hackathon Projects
+## Minor Projects
 
-I've competed in a bunch of different hackathons. The code that we write during hackathons isn't pretty, and may require [minimal configuration and tweaking](https://xkcd.com/1742/) to get working.
+#### Usable Projects
+
+- [PPA Stats](https://github.com/hsheth2/ppa-stats) - The fastest way to view download statistics for a package published in a PPA on Launchpad. [Try it out!](https://ppa-stats.sheth.io/)
+- [Yale Event Calendars](https://github.com/hsheth2/yale-event-calendars) - Adds Yale-related calendars directly to your calendar, and keeps them automatically updated. [Try it out!](https://yale-calendars.sheth.io/)
+
+#### Maintenance
+
+- [cava-ppa](https://github.com/hsheth2/cava-ppa) - An Ubuntu package for the [CAVA](https://github.com/karlstav/cava) music visualizer. Take a look at the [download stats](https://ppa-stats.sheth.io/#/?ppaName=ppa&ppaOwner=hsheth2&packageName=cava).
+- [mysql-low-memory](https://github.com/hsheth2/mysql-low-memory) - A MySQL Docker image with lower memory requirements. I have no clue who's using it, but it has 50K+ pulls on the [Docker Hub](https://hub.docker.com/r/hsheth2/mysql-low-memory).
+
+#### Hackathons
+
+I've competed in a bunch of different hackathons. The code that we write during hackathons isn't pretty, and may require [minimal configuration and tweaking](https://xkcd.com/1742/) to get working. In this list, 🥇 indicates first place, 🥈 indicates second place, and 🏆 indicates some other prize.
 
 - [Opinionate](https://github.com/hsheth2/opinionate) - MIT Blueprint 2015 🥈
 - [Pinpoint](https://github.com/hsheth2/pinpoint) - MIT Blueprint 2016
@@ -63,3 +75,7 @@ I've competed in a bunch of different hackathons. The code that we write during 
 - [EnvizVR](https://github.com/Reichenbachian/YHacks) - YHacks 2018
 - [GPUppy](https://github.com/as-com/gpuppy) - HackMIT 2019 🏆
 - [Flython](https://devpost.com/software/flython) - TreeHacks 2020
+
+[//]: graveyard projects: hermes, emask, gomod
+
+[//]: finished but not big enough: sieve, tanks, space-game, UML generator
