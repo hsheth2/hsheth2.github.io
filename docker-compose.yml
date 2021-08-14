@@ -9,6 +9,7 @@ services:
       traefik.http.routers.harshal-sheth-io.rule: Host(`harshal.sheth.io`)
       traefik.http.routers.harshal-sheth-io.tls: true
       traefik.http.routers.harshal-sheth-io.middlewares: SecureTLS
+      com.centurylinklabs.watchtower.enable: "false"
     networks:
       - traefik
       - default
