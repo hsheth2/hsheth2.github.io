@@ -36,8 +36,8 @@ plugins:
 
 # Modify navbar header pages
 header_pages:
-  - about.markdown
-  - projects.markdown
+  - about.md
+  - projects.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.

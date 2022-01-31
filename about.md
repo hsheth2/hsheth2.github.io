@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /
+permalink: /about
 ---
 
 <style type="text/css">
@@ -26,9 +26,9 @@ permalink: /
 
 I'm Harshal Sheth, and I'm an undergrad studying CS at Yale. I've previously worked at Citadel Securities, at Google, where I built out tracing tools for [Fuchsia](https://fuchsia.dev/), and at [Instabase](https://about.instabase.com/), where I built a scalable, distributed task execution framework.
 
-At Yale, I'm involved in a bunch of different things: I dance on [MonstRAASity](https://collegearts.yale.edu/organizations/alliance-dance-yale/dance-groups/monstraasity-raas), advise tech teams as part of [Code4Good](http://yalecode4good.org/), help manage a $400k portfolio in [YSIG](https://yalesig.com/), and analyze investment opportunities for the greater good through [UP Fund](https://www.theupfund.org/about). I also started and run the [YCS](http://yalecompsociety.org/) Dev Team, which manages [Coursetable](https://coursetable.com/).
+At Yale, I'm involved in a bunch of different things: I dance on [MonstRAASity](https://collegearts.yale.edu/organizations/alliance-dance-yale/dance-groups/monstraasity-raas), advise tech teams as part of [Code4Good](http://yalecode4good.org/), help manage a $400k portfolio in [YSIG](https://yalesig.com/), and analyze investment opportunities for the greater good through [UP Fund](https://www.theupfund.org/about). I also started and run the [YCS](http://yalecompsociety.org/) Dev Team, which manages [CourseTable](https://coursetable.com/).
 
-Right now (as of 2020-08-15), I've been working on some [personal projects]({% link projects.markdown %}), and I'll be starting at [8VC](https://8vc.com/) soon.
+Right now (as of 2020-08-15), I've been working on some [personal projects]({% link projects.md %}), and I'll be starting at [8VC](https://8vc.com/) soon.
 
 ### Contact
 
