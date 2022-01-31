@@ -27,7 +27,6 @@ Conversion notes:
 
 WebAssembly is at an inflection point. Over the next few years, I expect to see increased adoption of WebAssembly across the tech sphere, from containerization to plugin systems to serverless computing platforms. The following is a discussion of what WebAssembly is, what makes it a relevant technology, and where it’s being used today. I’ll also describe some potentially high-impact applications and make some predictions about its future.
 
-
 ## What is WebAssembly?
 
 WebAssembly (abbreviated Wasm) is an intermediate layer between various programming languages and many different execution environments. You can take code written in over 30 different languages and compile it into a .wasm file, and then can execute that file in the browser, on a server, or even on a car.
@@ -35,8 +34,6 @@ WebAssembly (abbreviated Wasm) is an intermediate layer between various programm
 The name “WebAssembly” is misleading. While it was initially designed to make code run fast on the web, it now can run in a variety of environments outside of the browser as well. Moreover, WebAssembly is not assembly but rather a slightly higher-level bytecode.
 
 Plenty of ink has been spilled on describing WebAssembly and explaining its history, so I’ll simply refer to some good primers here:
-
-
 
 * [A cartoon intro to WebAssembly - Mozilla Hacks - the Web developer blog](https://hacks.mozilla.org/2017/02/a-cartoon-intro-to-webassembly/) 
 * [WebAssembly. Scary name, exciting applications. \| Nicky blogs](https://nickymeuleman.netlify.app/blog/webassembly) 
@@ -47,28 +44,17 @@ Plenty of ink has been spilled on describing WebAssembly and explaining its hist
 
 WebAssembly excels because of the following five characteristics:
 
-
-
 * **Portable**: The binary format for Wasm bytecode is standardized, meaning that any runtime capable of executing Wasm will be able to run any Wasm code.[^1] This is similar to Java’s promise of “write once, run anywhere”. In the browser, [95% of users’ browsers](https://caniuse.com/wasm) can execute WebAssembly, and the remaining gap can be bridged using a wasm2js compiler. For servers, there are runtimes like [Wasmtime](https://github.com/bytecodealliance/wasmtime) and [Wasmer](https://github.com/wasmerio/wasmer). Even resource-constrained IoT devices can join the fun using [WAMR](https://github.com/bytecodealliance/wasm-micro-runtime).[^2]
-
-
 * **Universal**: Many languages can compile into Wasm. This support goes beyond systems languages like C, C++, and Rust to include garbage-collected, high-level languages like Go, Python, and Ruby.[^3] A full list of languages that compile to Wasm can be found [here](https://github.com/appcypher/awesome-wasm-langs).
-
-
 * **“Near-Native Performance”**: Wasm is often [described](https://developer.mozilla.org/en-US/docs/WebAssembly) as having “near-native performance”. What this actually means is that WebAssembly is almost always faster than JavaScript, especially for compute-intensive workloads, and averages between 1.45 and 1.55 times slower than [native code](https://www.usenix.org/conference/atc19/presentation/jangda), but results do [vary by runtime](https://00f.net/2021/02/22/webassembly-runtimes-benchmarks/).
 * **Fast Startup Time**: The cold start time of Wasm is important enough that it warrants a category of its own. On the server, it can achieve 10-100x [faster cold starts](https://repositum.tuwien.at/bitstream/20.500.12708/17598/1/Gackstatter%20Philipp%20-%202021%20-%20A%20WebAssembly%20Container%20Runtime%20for%20Serverless%20Edge...pdf) than Docker containers because it does not need to create a new OS process for every container. In the browser, decoding Wasm and translating it to machine code is faster than parsing, interpreting, and optimizing JavaScript, and so Wasm code can begin executing at peak performance more quickly than JavaScript can.[^4]
-
-
 * **Secure**: WebAssembly was designed with the web in mind and so security was a priority. Code running in a Wasm runtime is memory sandboxed and capability constrained, meaning that it is restricted to doing what it is explicitly allowed to do.[^5] While sandboxed, Wasm code can still be granted access to the underlying system, including system-level interfaces and hardware features.
 
 ## Where is WebAssembly useful?
 
-
 ### Speeding up JavaScript
 
 The initial motivation behind Wasm and its precursor asm.js was to speed up client-side code on the web, and there are many examples of Wasm excelling in this arena:
-
-
 
 * The core of the Figma design tool, for example, is written in C++ and then compiled to WebAssembly. They found major [performance and usability wins](https://www.figma.com/blog/building-a-professional-design-tool-on-the-web/) by writing in C++, while [compiling to WebAssembly](https://www.figma.com/blog/webassembly-cut-figmas-load-time-by-3x/) cut load times by 3x and dramatically reduced download sizes.
 * The password manager 1Password saw up to [13-39x speedups](https://blog.1password.com/1password-x-may-2019-update/) on form-heavy sites when switching to Wasm. Wasm performance is also [more consistent](https://developers.google.com/web/updates/2019/02/hotpath-with-wasm) than JavaScript, which is important for latency-sensitive applications.[^6]
@@ -79,17 +65,11 @@ WebAssembly lets us more easily cross the boundaries between programming languag
 
 Right now, this is mainly used to port applications to the web. Here’s some examples:
 
-
-
 * Figma makes use of a low-level C++ library called Skia for 2D graphics rather than building their own graphics engine or porting one to JavaScript.[^7] 
-
-
 * My favorite chess server, lichess.org, runs the world-class Stockfish chess engine in users’ browsers, saving them the computational burden of running it server-side.
 * [Google Earth](https://medium.com/google-earth/google-earth-comes-to-more-browsers-thanks-to-webassembly-1877d95810d6) and [Adobe Photoshop](https://web.dev/ps-on-the-web/) ported their C++ codebases to the web using Wasm.
 
 Porting applications to the web is the easiest place to start, and we’ll likely see that [trend continue](https://paulbutler.org/2020/the-webassembly-app-gap/). However, Wasm’s interoperability is not limited to the browser. It’s also been used to make code work cross-platform and cross-device:
-
-
 
 * The [Uno Platform](https://platform.uno/) is a UI platform that lets you write a single application and have it run across Windows, macOS, iOS, Android, Linux, and browsers. It seems to be fairly Windows-centric, as applications are written in C# and XAML, and so many of the use cases are based around reducing the effort required to port legacy applications to new platforms.
 * [Amazon Prime](https://www.amazon.science/blog/how-prime-video-updates-its-app-for-more-than-8-000-device-types), [Disney+](https://medium.com/disney-streaming/introducing-the-disney-application-development-kit-adk-ad85ca139073), and the [BBC](https://www.youtube.com/watch?v=28paRXqI-Gk) all use WebAssembly in their video platforms. For example, Amazon Prime uses it to ship new features to a huge variety of device types while maintaining acceptable performance.
