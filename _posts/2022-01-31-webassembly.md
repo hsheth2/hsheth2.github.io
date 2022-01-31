@@ -213,7 +213,7 @@ At this point you’re probably thinking: if WebAssembly is so good, why isn’t
 
 WebAssembly has been deployed in a fairly impressive list of places and serves an assortment of use cases, but these represent isolated pockets of activity within the broader tech world. Among my friends, the small fraction who have heard of WebAssembly think it’s really exciting in principle, but are not building with it because it isn’t quite mature yet. However, many of these issues are being actively worked on and will probably reach an acceptable state within the next year or two. As such, it seems **we’re on the brink of an explosion in WebAssembly activity, ecosystem, and community**. 
 
-_Thanks to Nihar Sheth, Mohak Jain, and Michelle Fang for their feedback on early drafts of this article._
+_Thanks to Nihar Sheth, Mohak Jain, Andrew Sun, and Michelle Fang for their feedback on early drafts of this article._
 
 
 <!-- Footnotes themselves at the bottom. -->
