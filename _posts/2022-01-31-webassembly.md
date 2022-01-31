@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why you should pay attention to WebAssembly"
+title:  "Pay attention to WebAssembly"
 ---
 
 <!-----
