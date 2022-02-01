@@ -3,28 +3,6 @@ layout: post
 title:  "Pay attention to WebAssembly"
 ---
 
-<!-----
-
-Yay, no errors, warnings, or alerts!
-
-Conversion time: 1.431 seconds.
-
-
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β33
-* Sun Jan 30 2022 22:34:50 GMT-0800 (PST)
-* Source doc: WebAssembly writeup
------>
-
-
 WebAssembly is at an inflection point. Over the next few years, I expect to see increased adoption of WebAssembly across the tech sphere, from containerization to plugin systems to serverless computing platforms. The following is a discussion of what WebAssembly is, what makes it a relevant technology, and where it’s being used today. I’ll also describe some potentially high-impact applications and make some predictions about its future.
 
 ## What is WebAssembly?
@@ -65,7 +43,7 @@ WebAssembly lets us more easily cross the boundaries between programming languag
 
 Right now, this is mainly used to port applications to the web. Here’s some examples:
 
-* Figma makes use of a low-level C++ library called Skia for 2D graphics rather than building their own graphics engine or porting one to JavaScript.[^7] 
+* Figma makes use of a low-level C++ library called Skia for some graphics algorithms rather than building their own or porting them to JavaScript.[^7] 
 * My favorite chess server, lichess.org, runs the world-class Stockfish chess engine in users’ browsers, saving them the computational burden of running it server-side.
 * [Google Earth](https://medium.com/google-earth/google-earth-comes-to-more-browsers-thanks-to-webassembly-1877d95810d6) and [Adobe Photoshop](https://web.dev/ps-on-the-web/) ported their C++ codebases to the web using Wasm.
 
@@ -216,7 +194,6 @@ WebAssembly has been deployed in a fairly impressive list of places and serves a
 _Thanks to Nihar Sheth, Mohak Jain, Andrew Sun, and Michelle Fang for their feedback on early drafts of this article._
 
 
-<!-- Footnotes themselves at the bottom. -->
 ## Notes
 
 [^1]:
@@ -244,7 +221,7 @@ _Thanks to Nihar Sheth, Mohak Jain, Andrew Sun, and Michelle Fang for their feed
 
 [^7]:
 
-     From a personal conversation with a tech leader at Figma a few years back. Many browsers, including Google Chrome and Firefox, already use Skia under the hood. However, they do not expose Skia APIs directly but instead applications must use the slower browser DOM or SVG interfaces. Figma draws directly to the browser canvas element, bypassing these slower layers, but still makes use of the nicer Skia APIs by [embedding](https://skia.org/docs/user/modules/canvaskit/) the library within their application.
+     From a personal conversation with a tech leader at Figma a few years back. Many browsers, including Google Chrome and Firefox, already use Skia under the hood. However, they do not expose Skia APIs directly but instead applications must use the slower browser DOM or SVG interfaces. Figma draws directly to the browser canvas element, bypassing these slower layers, but still makes use of some Skia functionality by [embedding](https://skia.org/docs/user/modules/canvaskit/) it within their application.
 
 [^8]:
      It’s worth noting that there are other alternatives. AWS Lambda, for example, uses the lightweight [Firecracker MicroVM](https://firecracker-microvm.github.io/). In a head to head, WebAssembly does have some [performance advantages](https://arxiv.org/ftp/arxiv/papers/2010/2010.07115.pdf).
