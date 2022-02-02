@@ -39,7 +39,7 @@ Right now (as of 2022-01-18), I'm finishing up my last semester at Yale and work
 
 ### Contact
 
-If you'd like to connect, work together, or just chat, please reach out via email to [harshal@sheth.io](mailto:harshal@sheth.io).
+If you'd like to connect, work together, or just chat, please reach out via email to [h@sheth.io](mailto:harshal@sheth.io).
 
 You can also find me on [Github](https://github.com/hsheth2/), [LinkedIn](https://www.linkedin.com/in/hsheth2/), or [Twitter](https://twitter.com/_harshalsheth).
 
