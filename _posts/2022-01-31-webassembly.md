@@ -3,6 +3,8 @@ layout: post
 title:  "Pay attention to WebAssembly"
 ---
 
+_[Read in Japanese](https://postd.cc/pay-attention-to-web-assembly/) thanks to the folks at POSTD._
+
 WebAssembly is at an inflection point. Over the next few years, I expect to see increased adoption of WebAssembly across the tech sphere, from containerization to plugin systems to serverless computing platforms. The following is a discussion of what WebAssembly is, what makes it a relevant technology, and where it’s being used today. I’ll also describe some potentially high-impact applications and make some predictions about its future.
 
 ## What is WebAssembly?
