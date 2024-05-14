@@ -24,7 +24,7 @@ permalink: /about
 
 <img class="avatar" alt="A picture of me" src="{{ "/assets/images/me.png" | relative_url }}" />
 
-I'm Harshal Sheth, and I'm an undergrad studying CS at Yale. I'm also a founding engineer at [Acryl Data](https://www.acryldata.io/).
+I'm Harshal Sheth. I'm currently a founding engineer at [Acryl Data](https://www.acryldata.io/). I recently graduated from Yale (Computer Science '22).
 
 I've previously interned at the following places:
 
@@ -34,8 +34,6 @@ I've previously interned at the following places:
 - [Instabase](https://about.instabase.com/), where I built a scalable, distributed task execution framework.
 
 <!-- At Yale, I'm involved in a bunch of different things: I dance on [MonstRAASity](https://collegearts.yale.edu/organizations/alliance-dance-yale/dance-groups/monstraasity-raas), advise tech teams as part of [Code4Good](http://yalecode4good.org/), help manage a $400k portfolio in [YSIG](https://yalesig.com/), and analyze investment opportunities for the greater good through [UP Fund](https://www.theupfund.org/about). I also started and run the [YCS](http://yalecompsociety.org/) Dev Team, which manages [CourseTable](https://coursetable.com/). -->
-
-Right now (as of 2022-01-18), I'm finishing up my last semester at Yale and working on a few [side projects]({% link projects.md %}).
 
 ### Contact
 

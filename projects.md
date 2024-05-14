@@ -9,11 +9,19 @@ Although I'm always [working on new stuff](https://github.com/hsheth2), this sho
 
 ## Major Projects
 
+### **CourseTable**: course search tool for Yale students
+
+I led a team of ~10 undergrads working on full rebuild of CourseTable, a tool used by Yale students to find courses. After the launch of v2, CourseTable was used by 95% of Yale undergrads and handled ~5 million requests each semester.
+
+- Visit the [CourseTable website](https://coursetable.com).
+- Yale Daily News [article](https://yaledailynews.com/blog/2020/10/30/yale-computer-society-launches-coursetable-2-0/) covering the launch of CourseTable 2.0.
+- All the [code](https://github.com/coursetable/coursetable) is open source.
+
 ### **Skua**: distributed tracing in the Linux kernel
 
 <!-- ![Skua architecture]({{ "/assets/images/skua-diagram.png" | relative_url }}) -->
 
-Skua extends the [Jaeger](https://www.jaegertracing.io/ ) distributed tracing framework to integrate kernel-level traces produced by [LTTng](https://lttng.org/ ).
+Skua extends the [Jaeger](https://www.jaegertracing.io/) distributed tracing framework to integrate kernel-level traces produced by [LTTng](https://lttng.org/).
 [Andrew Sun](https://andrewsun.com/) and I presented at the [2018 MIT PRIMES conference](https://math.mit.edu/research/highschool/primes/conference/conf-2018.php) and at [DevConf US 2018](https://devconf.info/us/2018).
 
 - Take a look at our [slides](https://l.sheth.io/skua-slides).
@@ -32,7 +40,7 @@ Tarpan is a completely in-band variant of the [D-BGP](https://www.darwinsbgp.com
 
 [Aashish Welling](https://github.com/omegablitz) and I implemented a user-space network stack in Go. We presented at the [2015 MIT PRIMES conference](https://math.mit.edu/research/highschool/primes/conference/conf-2015.php) and were also named semifinalists in the 2015 [Siemens Competition](https://en.wikipedia.org/wiki/Siemens_Competition).
 
-- Read the [paper](https://arxiv.org/abs/1603.05636), titled *An Implementation and Analysis of a Kernel Network Stack in Go with the CSP Style*.
+- Read the [paper](https://arxiv.org/abs/1603.05636), titled _An Implementation and Analysis of a Kernel Network Stack in Go with the CSP Style_.
 - Our [code](https://github.com/hsheth2/gonet) is open source and probably has more Github stars than it deserves.
 
 ### **when2water**: an intelligent irrigation controller
@@ -47,12 +55,13 @@ Along with my brother [Nihar Sheth](https://nihar.sheth.io), I built a low-cost 
 
 While not really a project per-se, I've spent a fair amount of time on [Capture The Flag](https://ctftime.org/ctf-wtf/) competitions, a type of information security competition. I've had the pleasure of working with some really bright people over a bunch of different competitions, including CSAW HSF, picoCTF, TJCTF, HSCTF, and PACTF.
 
-This all culminated in us running our own competition, [CTF(x)](https://ctf-x.github.io/). Almost [500 teams](https://ctftime.org/event/348) participated in the CTF, and no team was able to get a perfect score. After the competition, we posted detailed  [writeups](https://github.com/ctf-x/ctfx-problems-2016) for all the problems.
+This all culminated in us running our own competition, [CTF(x)](https://ctf-x.github.io/). Almost [500 teams](https://ctftime.org/event/348) participated in the CTF, and no team was able to get a perfect score. After the competition, we posted detailed [writeups](https://github.com/ctf-x/ctfx-problems-2016) for all the problems.
 
 ## Minor Projects
 
 #### Usable Projects
 
+- [Embedding Playground](https://github.com/john-sungjin/embedding-playground) - A small utility to quickly play around with and iterate on embeddings. [Try it out!](https://embed.sheth.io/)
 - [PPA Stats](https://github.com/hsheth2/ppa-stats) - The fastest way to view download statistics for a package published in a PPA on Launchpad. [Try it out!](https://ppa-stats.sheth.io/)
 - [Yale Event Calendars](https://github.com/hsheth2/yale-event-calendars) - Adds Yale-related calendars directly to your calendar, and keeps them automatically updated. [Try it out!](https://yale-calendars.sheth.io/)
 

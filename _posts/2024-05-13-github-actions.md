@@ -35,8 +35,6 @@ The GitHub Actions product is a collection of frustrating technical decisions (l
 
 <!-- _Thanks to Mohak Jain for his feedback on early drafts of this article._ -->
 
-<!-- Footnotes themselves at the bottom. -->
-
 ## Notes
 
 [^1]: Determining CI provider market share turned out to be quite the rabbit hole. In 2017, GitHub [published a chart](https://github.blog/2017-11-07-github-welcomes-all-ci-tools/) showing Travis CI at 50% market share, and CircleCI in second at ~25%, and Jenkins in third. This one was weighted by the CI context info on commits, and the numbers sound pretty reasonable to me. A [paper](https://decan.lexpage.net/files/SANER-2022a.pdf) from 2022 that surveyed npm packages with GitHub repos found GitHub Actions at 51.7%, followed by Travis at 42.5% and CircleCI at 10.2%. A [survey by JetBrains](https://www.jetbrains.com/lp/devecosystem-2023/team-tools/#ci_tools) in 2023 shows Jenkins in the lead at 54%, with GitHub Actions and GitLab CI trailing closely at 51% each and CircleCI at 11% and Travis CI at 9%. The results from 2022 and 2023 reports differ significantly. I suspect the reason these numbers vary so wildly is because they’re using different denominators - one used npm-associated GitHub repos and the other surveyed individuals.
