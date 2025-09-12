@@ -1,4 +1,4 @@
-FROM ruby:2.7 AS builder
+FROM ruby:3.4.5 AS builder
 
 ENV JEKYLL_ENV=production
 ENV APP_DIR=/app
