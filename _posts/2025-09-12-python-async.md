@@ -5,7 +5,7 @@ title: "Python async: a step in the wrong direction"
 
 I recently read “[Python has had async for 10 years \-- why isn't it more popular?](https://tonybaloney.github.io/posts/why-isnt-python-async-more-popular.html)” and the [ensuing discussion](https://news.ycombinator.com/item?id=45106189). To summarize the post, async has struggled because:
 
-1. Network IO can be made async but file IO is not.
+1. Network IO can be made async but file IO currently can't.
 2. Many operations that are not GIL-blocking are event loop-blocking, meaning threads have a leg up. In fact, many async programs still end up heavily using thread pools.
 3. Conversely, it’s also extremely easy to accidentally block the event loop.[^1]
 4. Async requires a full parallel universe of APIs and libraries and it’s tricky to maintain both.
@@ -116,7 +116,7 @@ def main():
 main()
 ```
 
-While gevent is already quite solid,[^9] there’s two things we’d need to build to make it a fully viable replacement for async and the asyncio ecosystem.[^10]
+While gevent is already quite solid,[^9] there are two things we’d need to build to make it a fully viable replacement for async and the asyncio ecosystem.[^10]
 
 1. A structured concurrency layer built on top of gevent. It would be to gevent as AnyIO is to asyncio. Type checking is also important here, and we can draw inspiration from the asyncer library.
 2. A shim layer that brings async programs into the fold. It should be possible to build an asyncio event loop implementation that defers to gevent for all of its actual scheduling and execution.
@@ -148,7 +148,7 @@ main()
 
 It also introduces some super interesting possibilities for future work. Most exciting to me is the possibility of leveraging [free threading](https://docs.python.org/3/howto/free-threading-python.html) (aka no-GIL Python) by turning the gevent scheduler into a Go-style scheduler that multiplexes green threads (aka greenlets) onto multiple OS threads. While making most Python code totally thread-safe is tricky, there’s only a small jump from code that’s safe when run as a green thread to safe across non-GILed threads.
 
-In case it wasn’t clear: I remain excited about the future of Python. I get the circumstances and reasoning that led to adding async, and am grateful that the flexibility it afforded enabled the prototyping of stuff like Curio and Trio. I hope Python leans more heavily towards green threads moving forwards and that future programming languages make concurrency and coordination more of a first-class citizen.
+In case it wasn’t clear: I remain excited about the future of Python. I get the circumstances and reasoning that led to adding async, and am grateful that the flexibility it afforded enabled the prototyping of stuff like Curio and Trio. I hope Python leans more heavily towards green threads moving forward and that future programming languages make concurrency and coordination more of a first-class citizen.
 
 _Thanks to John Kim, Kevin Hu, and Shihao Cao for reviewing drafts of this post._
 
@@ -158,7 +158,7 @@ _Thanks to John Kim, Kevin Hu, and Shihao Cao for reviewing drafts of this post.
 [^4]: Ever since Go added support for non-cooperative preemption, you can’t block the event loop for too long. That’s effectively what you want.
 [^5]: Threading actually had this right from the start, but we threw away that insight with async.
 [^6]: SourceGraph’s [conc](https://github.com/sourcegraph/conc) library makes part of structured concurrency possible, but cancellation / timeouts / control-C handling are still pretty limited. From what I can see, those really do require exceptions.
-[^7]: There’s been many proposals over the years to bring something like stackless/greenlets/virtual threads to Python. For instance, “[From Async/Await to Virtual Threads](https://lucumr.pocoo.org/2025/7/26/virtual-threads/)” has similar ideas but doesn’t quite make the connection of gevent \+ greenlets being a presently viable vehicle for it.
+[^7]: There have been many proposals over the years to bring something like stackless/greenlets/virtual threads to Python. For instance, “[From Async/Await to Virtual Threads](https://lucumr.pocoo.org/2025/7/26/virtual-threads/)” has similar ideas but doesn’t quite make the connection of gevent \+ greenlets being a presently viable vehicle for it.
 [^8]: A common objection is “monkey-patching is brittle”. The gevent library has had years to iterate on its approach to monkeypatching. The more popular the library becomes, the more the rest of the ecosystem leans in \- so at scale this should become a moot point.
-[^9]: This begs the question: gevent has been around since 2009, so why isn’t it already more popular? It is already moderately popular: currently \~31m downloads/month, but still a far cry from httpx’s 266m/month or FastAPI’s 128m/month (data via [PyPI Stats](https://pypistats.org/)). My hypothesis is that (1) the monkeypatching was worse back then and still sounds scary, (2) gevent didn’t quite have the “batteries included” experience of Twisted/Tornado, and so (3) it never developed a broad ecosystem or community.
+[^9]: This begs the question: gevent has been around since 2009, so why isn’t it already more popular? It is already moderately popular: currently \~31M downloads/month, but still a far cry from httpx’s 266M/month or FastAPI’s 128M/month (data via [PyPI Stats](https://pypistats.org/)). My hypothesis is that (1) the monkeypatching was worse back then and still sounds scary, (2) gevent didn’t quite have the “batteries included” experience of Twisted/Tornado, and so (3) it never developed a broad ecosystem or community.
 [^10]: I’ve actually begun prototyping something like this, but haven’t gotten too far yet. Let me know if you’re working on something similar :)
