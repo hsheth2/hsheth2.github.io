@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python async: a step in the wrong direction"
+title: "Python concurrency: gevent had it right"
 ---
 
 I recently read “[Python has had async for 10 years \-- why isn't it more popular?](https://tonybaloney.github.io/posts/why-isnt-python-async-more-popular.html)” and the [ensuing discussion](https://news.ycombinator.com/item?id=45106189). To summarize the post, async has struggled because:
