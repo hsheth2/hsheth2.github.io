@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   web:
     build: .
@@ -20,7 +18,7 @@ services:
       SERVER_REDIRECT: harshal.sheth.io
     labels:
       traefik.enable: true
-      traefik.http.routers.harshal-sheth-alternate.rule: Host(`sheth.io`, `www.sheth.io`, `harshalsheth.me`, `www.harshalsheth.me`)
+      traefik.http.routers.harshal-sheth-alternate.rule: Host(`sheth.io`) || Host(`www.sheth.io`)
       traefik.http.routers.harshal-sheth-alternate.tls: true
       traefik.http.routers.harshal-sheth-alternate.middlewares: SecureTLS
     networks:
